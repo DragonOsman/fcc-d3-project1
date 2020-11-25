@@ -30,6 +30,10 @@
         "newline-before-return": "off",
         "space-before-function-paren": "off",
         "no-var": "error",
-        "prefer-const": "error"
+        "prefer-const": "error",
+        "semi": [
+            "error",
+            "always"
+        ]
     }
 }
