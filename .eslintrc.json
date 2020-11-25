@@ -17,7 +17,6 @@
         "ecmaVersion": 2020,
         "sourceType": "module"
     },
-    "module": "esnext",
     "plugins": [
         "@typescript-eslint"
     ],
