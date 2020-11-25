@@ -21,10 +21,13 @@
   },
   "homepage": "https://github.com/DragonOsman/fcc-d3-project1#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
     "anymatch": "^3.1.1",
     "babel-cli": "^6.26.0",
     "braces": "^3.0.2",
     "chokidar": "^3.4.3",
+    "eslint": "^7.14.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
