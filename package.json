@@ -1,0 +1,35 @@
+{
+  "name": "fcc-d3-project1",
+  "version": "1.0.0",
+  "description": "My solution to the \"Data Visualization Projects - Visualize Data with a Bar Chart\" challenge on Free Code Camp",
+  "main": "scripts/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DragonOsman/fcc-d3-project1.git"
+  },
+  "keywords": [
+    "d3-visualization",
+    "bar-chart"
+  ],
+  "author": "Osman Zakir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DragonOsman/fcc-d3-project1/issues"
+  },
+  "homepage": "https://github.com/DragonOsman/fcc-d3-project1#readme",
+  "devDependencies": {
+    "anymatch": "^3.1.1",
+    "babel-cli": "^6.26.0",
+    "braces": "^3.0.2",
+    "chokidar": "^3.4.3",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "micromatch": "^4.0.2",
+    "typescript": "^4.1.2"
+  }
+}
