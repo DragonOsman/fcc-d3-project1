@@ -27,6 +27,7 @@
     "babel-cli": "^6.26.0",
     "braces": "^3.0.2",
     "chokidar": "^3.4.3",
+    "d3": "^6.2.0",
     "eslint": "^7.14.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
