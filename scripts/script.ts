@@ -1,5 +1,3 @@
-import * as d3 from "d3";
-
 fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json",
   {
     method: "GET",
