@@ -10,7 +10,7 @@ fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
     }
   })
   .then(data => {
-    const svgWidth: number = 13000;
+    const svgWidth: number = 15000;
     const svgHeight: number = 500;
     const padding: number = 50;
     const container = d3.select("#bar-chart")
