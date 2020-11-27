@@ -10,7 +10,7 @@ fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
     }
   })
   .then(data => {
-    const svgWidth: number = 15000;
+    const svgWidth: number = 13000;
     const svgHeight: number = 500;
     const padding: number = 50;
     const container = d3.select("#bar-chart")
@@ -23,9 +23,7 @@ fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
 
     const dates:string[] = [];
     for (const elem of data.data) {
-      dates.push(`${new Date(elem[0]).getMonth() + 1}
-                 -${new Date(elem[0]).getDate()}
-                 -${new Date(elem[0]).getFullYear()}`);
+      dates.push(`${new Date(elem[0]).getMonth() + 1}-${new Date(elem[0]).getDate()}-${new Date(elem[0]).getFullYear()}`);
     }
 
     const xScale = d3.scaleBand();
