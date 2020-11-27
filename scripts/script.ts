@@ -26,17 +26,17 @@ fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
       dates.push(`${new Date(elem[0]).getMonth() + 1}-${new Date(elem[0]).getDate()}-${new Date(elem[0]).getFullYear()}`);
     }
 
-    const xScale = d3.scaleBand();
+    const xScale:d3.ScaleBand<string> = d3.scaleBand();
     xScale.domain(dates);
     console.log(xScale);
     xScale.range([padding, svgWidth - padding]);
-    const yScale = d3.scaleLinear();
+    const yScale:d3.ScaleLinear<number, number, never> = d3.scaleLinear();
     yScale.domain([0, 19000]);
     console.log(yScale);
     yScale.range([svgHeight - padding, padding]);
 
-    const xAxis = d3.axisBottom(xScale);
-    const yAxis = d3.axisLeft(yScale);
+    const xAxis:d3.Axis<string> = d3.axisBottom(xScale);
+    const yAxis:d3.Axis<d3.NumberValue> = d3.axisLeft(yScale);
 
     container.append("g")
       .attr("transform", `translate(0, ${svgHeight - padding})`)
