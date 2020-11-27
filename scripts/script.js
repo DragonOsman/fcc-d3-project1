@@ -20,7 +20,9 @@ fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
         .attr("y", 0);
     const dates = [];
     for (const elem of data.data) {
-        dates.push(`${new Date(elem[0]).getMonth() + 1}-${new Date(elem[0]).getDate()}-${new Date(elem[0]).getFullYear()}`);
+        dates.push(`${new Date(elem[0]).getMonth() + 1}
+                 -${new Date(elem[0]).getDate()}
+                 -${new Date(elem[0]).getFullYear()}`);
     }
     const xScale = d3.scaleBand();
     xScale.domain(dates);
