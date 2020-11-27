@@ -4,7 +4,7 @@
   "description": "My solution to the \"Data Visualization Projects - Visualize Data with a Bar Chart\" challenge on Free Code Camp",
   "main": "scripts/script.js",
   "scripts": {
-    "build": "babel src -d lib"
+    "sass": "sass --watch scss/style.scss styles/style.css"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/DragonOsman/fcc-d3-project1#readme",
   "devDependencies": {
-    "@types/d3": "^6.2.0",
     "@typescript-eslint/eslint-plugin": "^4.8.2",
     "@typescript-eslint/parser": "^4.8.2",
     "anymatch": "^3.1.1",
