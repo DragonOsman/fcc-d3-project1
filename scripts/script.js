@@ -14,7 +14,6 @@ fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
         dates.push(`${new Date(elem[0]).getMonth() + 1}-${new Date(elem[0]).getDate()}-${new Date(elem[0]).getFullYear()}`);
     }
     const svgWidth = (data.data.length * dates[0].length) * 10;
-    console.log(`svgWidth: ${svgWidth}`);
     const svgHeight = 500;
     const padding = 50;
     const container = d3.select("#bar-chart")
