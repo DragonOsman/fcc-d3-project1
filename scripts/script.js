@@ -38,9 +38,9 @@ fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
         .attr("data-date", d => d[0])
         .attr("data-gdp", d => d[1])
         .attr("x", (d, i) => i * 23)
-        .attr("y", d => svgHeight - yScale(d[1]) - padding) // height of SVG canvas - bar height - padding
+        .attr("y", d => svgHeight - d[1] - padding) // height of SVG canvas - bar height - padding
         .attr("width", 20)
-        .attr("height", d => yScale(d[1]))
+        .attr("height", d => d[1])
         .attr("class", "bar");
     container.append("g")
         .attr("transform", `translate(0, ${svgHeight - padding})`)
