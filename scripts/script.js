@@ -4,7 +4,7 @@ fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
     mode: "cors"
 })
     .then(response => {
-    if (response.ok) {
+    if (response.status >= 200 && response.status < 400) {
         return response.json();
     }
 })
