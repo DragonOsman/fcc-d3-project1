@@ -12,8 +12,9 @@ fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
     }
   })
   .then(data => {
+    const gdpData:any[] = [...data.data];
     const dates:string[] = [];
-    for (const elem of data.data) {
+    for (const elem of gdpData) {
       dates.push(`${new Date(elem[0]).getMonth() + 1}-${new Date(elem[0]).getDate()}-${new Date(elem[0]).getFullYear()}`);
     }
 
@@ -37,6 +38,19 @@ fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
 
     const xAxis:d3.Axis<string> = d3.axisBottom(xScale);
     const yAxis:d3.Axis<d3.NumberValue> = d3.axisLeft(yScale);
+
+    container.selectAll("rect")
+      .data(gdpData)
+      .enter()
+      .append("rect")
+      .attr("data-date", d => d[0])
+      .attr("data-gdp", d => d[1])
+      .attr("x", (d, i) => i * 23)
+      .attr("y", d => svgHeight - yScale(d[1]) - padding) // height of SVG canvas - bar height - padding
+      .attr("width", 20)
+      .attr("height", d => yScale(d[1]))
+      .attr("class", "bar")
+    ;
 
     container.append("g")
       .attr("transform", `translate(0, ${svgHeight - padding})`)

@@ -4,5 +4,8 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
+body rect.bar {
+  fill: #00022e;
+}
 
 /*# sourceMappingURL=style.css.map */
