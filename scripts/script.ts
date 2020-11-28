@@ -12,7 +12,13 @@ fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
     }
   })
   .then(data => {
-    const svgWidth: number = 13000;
+    const dates:string[] = [];
+    for (const elem of data.data) {
+      dates.push(`${new Date(elem[0]).getMonth() + 1}-${new Date(elem[0]).getDate()}-${new Date(elem[0]).getFullYear()}`);
+    }
+
+    const svgWidth: number = (data.data.length * dates[0].length) * 10;
+    console.log(`svgWidth: ${svgWidth}`);
     const svgHeight: number = 500;
     const padding: number = 50;
     const container = d3.select("#bar-chart")
@@ -23,18 +29,11 @@ fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/maste
       .attr("y", 0)
     ;
 
-    const dates:string[] = [];
-    for (const elem of data.data) {
-      dates.push(`${new Date(elem[0]).getMonth() + 1}-${new Date(elem[0]).getDate()}-${new Date(elem[0]).getFullYear()}`);
-    }
-
     const xScale:d3.ScaleBand<string> = d3.scaleBand();
     xScale.domain(dates);
-    console.log(xScale);
     xScale.range([padding, svgWidth - padding]);
     const yScale:d3.ScaleLinear<number, number, never> = d3.scaleLinear();
     yScale.domain([0, 19000]);
-    console.log(yScale);
     yScale.range([svgHeight - padding, padding]);
 
     const xAxis:d3.Axis<string> = d3.axisBottom(xScale);
