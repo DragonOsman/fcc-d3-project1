@@ -5,21 +5,17 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
         "standard"
     ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
-    "parser": "@typescript-eslint/parser",
+    "parser": "babel",
     "parserOptions": {
         "ecmaVersion": 2020,
         "sourceType": "script"
     },
-    "plugins": [
-        "@typescript-eslint"
-    ],
     "rules": {
         "eqeqeq": "error",
         "yoda": "error",
