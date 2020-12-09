@@ -3,34 +3,33 @@
         "browser": true,
         "es6": true
     },
-    "extends": [
-        "eslint:recommended",
-        "standard"
-    ],
+    "extends": "eslint:recommended",
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
-    "parser": "babel",
     "parserOptions": {
-        "ecmaVersion": 2020,
-        "sourceType": "script"
+        "ecmaVersion": 2018
     },
     "rules": {
-        "eqeqeq": "error",
-        "yoda": "error",
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
         "quotes": [
             "error",
             "double"
         ],
-        "newline-before-return": "off",
-        "space-before-function-paren": "off",
-        "no-var": "error",
-        "prefer-const": "error",
         "semi": [
             "error",
             "always"
         ],
-        "no-undef": "warn"
+        "yoda": "error",
+        "no-undef": "warn",
+        "eqeqeq": "error"
     }
 }
