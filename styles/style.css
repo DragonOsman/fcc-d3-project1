@@ -6,7 +6,6 @@ body {
 }
 body rect.bar {
   fill: #286086;
-  stroke: #000;
 }
 body rect.bar:hover {
   fill: #fff;
