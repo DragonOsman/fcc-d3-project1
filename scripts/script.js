@@ -23,7 +23,7 @@ d3.json(
     const barWidth = 5;
     const svgHeight = 500;
     const padding = 38;
-    const svgWidth = 1131;
+    const svgWidth = 980;
     const container = d3.select("#bar-chart")
       .append("svg")
       .attr("width", svgWidth)
@@ -67,7 +67,7 @@ d3.json(
         if (i !== (state.data.length - 1)) {
           return xScale(dates[i]);
         }
-        return xScale(dates[i]) - barWidth;
+        return xScale(dates[i]) - 2;
       })
       .attr("y", d => (svgHeight - ((svgHeight - yScale(d[1])) - padding) - padding))
       .attr("width", barWidth)
@@ -79,9 +79,9 @@ d3.json(
           .style("opacity", 0.9)
           .attr("height", `${barWidth + 2}px`)
           .attr("width", `${barWidth + 2}px`)
-          .style("left", `${e.pageX}px`)
-          .style("top", `${e.pageY - 28}px`)
-          .style("transform", "translateX(55px)")
+          .style("left", `${e.pageX - 200}px`)
+          .style("top", `${e.pageY - 100}px`)
+          .style("transform", "translateX(25px)")
         ;
 
         tooltip.transition()
@@ -96,8 +96,8 @@ d3.json(
         )
           .attr("data-date", d[0])
           .style("left", `${e.pageX}px`)
-          .style("top", `${e.pageY - 28}px`)
-          .style("transform", "translateX(55px)")
+          .style("top", `${e.pageY - 100}px`)
+          .style("transform", "translateX(25px)")
         ;
       })
       .on("mouseout", () => {

@@ -3,19 +3,31 @@ body {
   color: #fff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
+  position: relative;
 
-  & rect.bar {
-    fill: #286086;
-
-    &:hover {
-      fill: #fff;
-    }
-  }
-
-  & div.tooltip {
+  & .bar-chart-container {
+    border-radius: 20px;
+    background-color: #22232e;
+    width: 1200px;
+    justify-content: center;
     position: absolute;
-    background-color: rgba(20, 20, 20, 255);
-    padding: 5px;
-    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 4%);
+
+    & rect.bar {
+      fill: #286086;
+  
+      &:hover {
+        fill: #fff;
+      }
+    }
+  
+    & div.tooltip {
+      position: absolute;
+      background-color: rgba(20, 20, 20, 255);
+      padding: 5px;
+      border-radius: 10px;
+    }
   }
 }

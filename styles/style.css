@@ -3,14 +3,25 @@ body {
   color: #fff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
+  position: relative;
 }
-body rect.bar {
+body .bar-chart-container {
+  border-radius: 20px;
+  background-color: #22232e;
+  width: 1200px;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 4%);
+}
+body .bar-chart-container rect.bar {
   fill: #286086;
 }
-body rect.bar:hover {
+body .bar-chart-container rect.bar:hover {
   fill: #fff;
 }
-body div.tooltip {
+body .bar-chart-container div.tooltip {
   position: absolute;
   background-color: #141414;
   padding: 5px;
