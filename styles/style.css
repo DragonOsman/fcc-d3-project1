@@ -5,10 +5,11 @@ body {
   text-align: center;
 }
 body rect.bar {
-  fill: #00022e;
+  fill: #286086;
+  border: 1px solid #000;
 }
 body rect.bar:hover {
-  fill: #286086;
+  fill: #fff;
 }
 body div.tooltip {
   position: absolute;

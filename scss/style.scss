@@ -5,10 +5,11 @@ body {
   text-align: center;
 
   & rect.bar {
-    fill: #00022e;
+    fill: #286086;
+    border: 1px solid #000;
 
     &:hover {
-      fill: #286086;
+      fill: #fff;
     }
   }
 
