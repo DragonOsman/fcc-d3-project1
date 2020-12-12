@@ -6,5 +6,16 @@ body {
 
   & rect.bar {
     fill: #00022e;
+
+    &:hover {
+      fill: #286086;
+    }
+  }
+
+  & div.tooltip {
+    position: absolute;
+    background-color: rgba(20, 20, 20, 255);
+    padding: 5px;
+    border-radius: 10px;
   }
 }
