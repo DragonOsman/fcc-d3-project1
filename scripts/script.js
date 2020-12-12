@@ -21,9 +21,9 @@ d3.json(
     }
 
     const barWidth = 5;
-    const svgHeight = 600;
-    const padding = 40;
-    const svgWidth = (barWidth * state.data.length) + dates[0].toString().length + 60;
+    const svgHeight = 500;
+    const padding = 38;
+    const svgWidth = 1131;
     const container = d3.select("#bar-chart")
       .append("svg")
       .attr("width", svgWidth)
