@@ -81,7 +81,7 @@ d3.json(
           .attr("width", `${barWidth + 2}px`)
           .style("left", `${e.pageX}px`)
           .style("top", `${e.pageY - 28}px`)
-          .style("transform", "translateX(10px)")
+          .style("transform", "translateX(60px)")
         ;
 
         tooltip.transition()
@@ -97,7 +97,7 @@ d3.json(
           .attr("data-date", d[0])
           .style("left", `${e.pageX}px`)
           .style("top", `${e.pageY - 28}px`)
-          .style("transform", "translateX(10px)")
+          .style("transform", "translateX(60px)")
         ;
       })
       .on("mouseout", () => {
