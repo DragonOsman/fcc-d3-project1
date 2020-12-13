@@ -51,12 +51,6 @@ d3.json(
       .style("opacity", 0)
     ;
 
-    const overlay = d3.select(".tooltip-container")
-      .append("div")
-      .attr("class", "overlay")
-      .style("opacity", 0)
-    ;
-
     container.selectAll("rect")
       .data(state.data)
       .enter()
@@ -74,19 +68,11 @@ d3.json(
       .attr("height", d => (svgHeight - yScale(d[1])) - padding)
       .attr("class", "bar")
       .on("mouseover", (e, d) => {
-        overlay.transition()
-          .duration(0)
-          .style("opacity", 0.9)
-          .attr("height", `${barWidth + 2}px`)
-          .attr("width", `${barWidth + 2}px`)
-          .style("left", `${e.pageX - 200}px`)
-          .style("top", `${e.pageY - 100}px`)
-          .style("transform", "translateX(25px)")
-        ;
-
         tooltip.transition()
           .duration(200)
           .style("opacity", 0.9)
+          .attr("height", `${barWidth + 2}px`)
+          .attr("width", `${barWidth + 2}px`)
         ;
          
         tooltip.html(
@@ -102,11 +88,6 @@ d3.json(
       })
       .on("mouseout", () => {
         tooltip.transition()
-          .duration(200)
-          .style("opacity", 0)
-        ;
-
-        overlay.transition()
           .duration(200)
           .style("opacity", 0)
         ;
